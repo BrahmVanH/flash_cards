@@ -6,5 +6,11 @@ flashcard
   french
   deck
 
+deck 
+  deckName
+  contents
+  description
+
 query
-  get
+  getDeck(deckName)
+

@@ -26,6 +26,6 @@ const flashcardSchema = new Schema(
 	}
 );
 
-const Flashcard = model('flashcard', flashcardSchema);
 
-module.exports = Flashcard;
+
+module.exports = flashcardSchema;

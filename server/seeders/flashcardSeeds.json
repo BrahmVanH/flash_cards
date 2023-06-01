@@ -1,0 +1,200 @@
+[
+  {
+    "englishTranslation": "Hello",
+    "spanishTranslation": "Hola",
+    "frenchTranslation": "Bonjour",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "Goodbye",
+    "spanishTranslation": "Adiós",
+    "frenchTranslation": "Au revoir",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "Thank you",
+    "spanishTranslation": "Gracias",
+    "frenchTranslation": "Merci",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "Please",
+    "spanishTranslation": "Por favor",
+    "frenchTranslation": "S'il vous plaît",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "Yes",
+    "spanishTranslation": "Sí",
+    "frenchTranslation": "Oui",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "No",
+    "spanishTranslation": "No",
+    "frenchTranslation": "Non",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "I love you",
+    "spanishTranslation": "Te amo",
+    "frenchTranslation": "Je t'aime",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "Good morning",
+    "spanishTranslation": "Buenos días",
+    "frenchTranslation": "Bonjour",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "Good afternoon",
+    "spanishTranslation": "Buenas tardes",
+    "frenchTranslation": "Bonne après-midi",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "Good evening",
+    "spanishTranslation": "Buenas noches",
+    "frenchTranslation": "Bonsoir",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "Yes, please",
+    "spanishTranslation": "Sí, por favor",
+    "frenchTranslation": "Oui, s'il vous plaît",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "No, thank you",
+    "spanishTranslation": "No, gracias",
+    "frenchTranslation": "Non, merci",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "Excuse me",
+    "spanishTranslation": "Perdón",
+    "frenchTranslation": "Excusez-moi",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "I'm sorry",
+    "spanishTranslation": "Lo siento",
+    "frenchTranslation": "Je suis désolé(e)",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "How are you?",
+    "spanishTranslation": "¿Cómo estás?",
+    "frenchTranslation": "Comment ça va?",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "I'm fine",
+    "spanishTranslation": "Estoy bien",
+    "frenchTranslation": "Je vais bien",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "What is your name?",
+    "spanishTranslation": "¿Cómo te llamas?",
+    "frenchTranslation": "Comment tu t'appelles?",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "My name is...",
+    "spanishTranslation": "Mi nombre es...",
+    "frenchTranslation": "Je m'appelle...",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "Where is the bathroom?",
+    "spanishTranslation": "¿Dónde está el baño?",
+    "frenchTranslation": "Où sont les toilettes?",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "I don't understand",
+    "spanishTranslation": "No entiendo",
+    "frenchTranslation": "Je ne comprends pas",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "How much does it cost?",
+    "spanishTranslation": "¿Cuánto cuesta?",
+    "frenchTranslation": "Combien ça coûte?",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "Where is the nearest restaurant?",
+    "spanishTranslation": "¿Dónde está el restaurante más cercano?",
+    "frenchTranslation": "Où se trouve le restaurant le plus proche?",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "I need help",
+    "spanishTranslation": "Necesito ayuda",
+    "frenchTranslation": "J'ai besoin d'aide",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "I don't know",
+    "spanishTranslation": "No sé",
+    "frenchTranslation": "Je ne sais pas",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "I'm lost",
+    "spanishTranslation": "Estoy perdido(a)",
+    "frenchTranslation": "Je suis perdu(e)",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "Excuse me, where is the nearest subway station?",
+    "spanishTranslation": "Perdón, ¿dónde está la estación de metro más cercana?",
+    "frenchTranslation": "Excusez-moi, où se trouve la station de métro la plus proche?",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "What time is it?",
+    "spanishTranslation": "¿Qué hora es?",
+    "frenchTranslation": "Quelle heure est-il?",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "I'm hungry",
+    "spanishTranslation": "Tengo hambre",
+    "frenchTranslation": "J'ai faim",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "I'm thirsty",
+    "spanishTranslation": "Tengo sed",
+    "frenchTranslation": "J'ai soif",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "Where can I find a bank?",
+    "spanishTranslation": "¿Dónde puedo encontrar un banco?",
+    "frenchTranslation": "Où puis-je trouver une banque?",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "What is your phone number?",
+    "spanishTranslation": "¿Cuál es tu número de teléfono?",
+    "frenchTranslation": "Quel est ton numéro de téléphone?",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "Do you speak English?",
+    "spanishTranslation": "¿Hablas inglés?",
+    "frenchTranslation": "Parles-tu anglais?",
+    "deck": "languageFlashcards"
+  },
+  {
+    "englishTranslation": "I don't speak Spanish",
+    "spanishTranslation": "No hablo español",
+    "frenchTranslation": "Je ne parle pas espagnol",
+    "deck": "languageFlashcards"
+  }
+]

@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const flashcardSchema = require('./Flashcard');
 
 const deckSchema = new Schema(
 	{
@@ -12,10 +13,7 @@ const deckSchema = new Schema(
 				ref: 'flashcard',
 			},
 		],
-		description: {
-			type: String,
-			required: true,
-		},
+		description: [flashcardSchema],
 	},
 	{
 		toJSON: {

@@ -29,23 +29,33 @@ function Flashcard() {
 	// 	setShowAnswerSelected(true);
 	// };
 
-	const handleNext = (event) => {
+	const showTranslation = (event) => {
 		event.preventDefault();
 
-		cardCount++;
+		const translationEls = document.querySelectorAll('.hidden');
+    
+    for (const element of translationEls) {
+
+      element.classList.remove('hidden');
+    }
 	};
 
 	return (
-		<div className='container'>
-			{flashcardContent?.map((flashcard) => (
-				<TinderCard className='flashcard'>
-					<h2>Flashcard</h2>
-					<h5>{flashcard.deck}</h5>
-					<p>{flashcard.spanishTranslation}</p>
-					<p>{flashcard.englishTranslation}</p>
-					<p>{flashcard.frenchTranslation}</p>
-				</TinderCard>
-			))}
+		<div className='swiper-container'>
+			<div className='flashcard-container'>
+				{flashcardContent?.map((flashcard) => (
+					<TinderCard className='flashcard swipe' key={flashcard._id}>
+						<div className='flashcard-content'>
+							<div className='header-container'>
+								<h2>{flashcard.englishTranslation}</h2>
+							</div>
+							<p className='hidden'>Spanish: {flashcard.spanishTranslation}</p>
+							<p className='hidden'>French: {flashcard.frenchTranslation}</p>
+							<Button onClick={showTranslation}>Show Translations</Button>
+						</div>
+					</TinderCard>
+				))}
+			</div>
 		</div>
 	);
 }

@@ -7,13 +7,11 @@ const deckSchema = new Schema(
 			type: String,
 			required: true,
 		},
-		contents: [
-			{
-				type: Schema.Types.ObjectId,
-				ref: 'flashcard',
-			},
-		],
-		description: [flashcardSchema],
+		contents: [flashcardSchema],
+		description: {
+			type: String,
+			required: true,
+		},
 	},
 	{
 		toJSON: {

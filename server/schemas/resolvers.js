@@ -4,16 +4,28 @@ const { Flashcard, Deck } = require('../models');
 const resolvers = {
 	Query: {
 		getDeck: async (parent, { deckName }) => {
-			if (deckName != '') {
-				const deck = Deck.find({ deckName: deckName });
-			} else {
-				throw new Error('search parameter empty');
-			}
+			console.log('getting deck');
+			try {
+				let retrievedDeck = {};
+				if (deckName != '') {
+					const deck = await Deck.findOne({ deckName: deckName });
+					console.log(deck);
+					// deck.map((flashcard) => {
+					// 	console.log(flashcard);
+					// });
+					retrievedDeck = deck;
+					console.log(retrievedDeck);
+				} else {
+					throw new Error('search parameter empty');
+				}
 
-			if (!deck) {
-				throw new Error('No deck found with that name');
+				if (!retrievedDeck) {
+					throw new Error('No deck found with that name');
+				}
+				return retrievedDeck;
+			} catch (err) {
+				console.error(`there was an error in finding that collection` + err);
 			}
-			return deck;
 		},
 	},
 };

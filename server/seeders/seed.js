@@ -1,11 +1,11 @@
 const db = require('../config/connection');
 const { Flashcard, Deck } = require('../models');
-const flashcardSeeds = require('./flashcardSeeds.json');
+const deckSeeds = require('./deckSeeds.json');
 
 db.once('open', async () => {
 	try {
-		await Flashcard.deleteMany({});
-		await Flashcard.create(flashcardSeeds);
+		await Deck.deleteMany({});
+		await Deck.create(deckSeeds);
 	} catch (err) {
 		console.error(err);
 		process.exit(1);

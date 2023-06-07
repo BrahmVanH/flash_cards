@@ -64,41 +64,33 @@ function Flashcard() {
 	}, [cardCountIndex]);
 
 	return (
-		<div className='swiper-container'>
-			<div className='flashcard-container'>
-				{endOfDeck ? (
-					<div>
-						<p>More decks coming soon...</p>
-					</div>
-				) : (
+		<div className='container'>
+			<div className='row'>
+				{flashcardContent !== {} && !loading ? (
 					<>
-						{flashcardContent !== {} && !loading ? (
-							<>
-								{flashcardContent?.map((flashcard) => (
-									<TinderCard
-										className='flashcard col-10 col-md-4 swipe d-flex justify-content-center align-content-center'
-										key={flashcard._id}
-										onSwipe={(direction) => swiped(direction)}>
-										<div
-											className={`flashcard-content flashcard ${
-												side ? 'side' : ''
-											}`}
-											onClick={handleClick}>
-											<div className='front'>
-												<h2>{flashcard.englishTranslation}</h2>
-											</div>
+						{flashcardContent?.map((flashcard) => (
+							<TinderCard
+								className='flashcard col-md-3 swipe d-flex justify-content-center align-content-center'
+								key={flashcard._id}
+								onSwipe={(direction) => swiped(direction)}>
+								<div
+									className={`flashcard-content flashcard ${
+										side ? 'side' : ''
+									}`}
+									onClick={handleClick}>
+									<div className='front'>
+										<h2>{flashcard.englishTranslation}</h2>
+									</div>
 
-											<div className='back translations'>
-													<h2>{flashcard.frenchTranslation}</h2>
-											</div>
-										</div>
-									</TinderCard>
-								))}
-							</>
-						) : (
-							<div> Loading deck </div>
-						)}
+									<div className='back translations'>
+										<h2>{flashcard.frenchTranslation}</h2>
+									</div>
+								</div>
+							</TinderCard>
+						))}
 					</>
+				) : (
+					<div> Loading deck </div>
 				)}
 			</div>
 		</div>

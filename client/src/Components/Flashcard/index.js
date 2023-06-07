@@ -3,19 +3,25 @@ import { Card, Button } from 'react-bootstrap';
 import { useQuery } from '@apollo/client';
 import { GET_DECK } from '../../utils/queries';
 import TinderCard from 'react-tinder-card';
+import MediaQuery from 'react-responsive';
 import '../Flashcard/flashcard.css';
 
 function Flashcard() {
-	const [flashcardContent, setFlashcardContent] = useState([]);
-	const [spanishTranslation, setSpanishTranslation] = useState('');
-	const [frenchTranslation, setFrenchTranslation] = useState('');
+	const [flashcardContent, setFlashcardContent] = useState({});
 	const [removeStyles, setRemoveStyles] = useState(false);
 	const [cardCountIndex, setCardCountIndex] = useState(0);
 	const [endOfDeck, setEndOfDeck] = useState(false);
+	const [side, setSide] = useState();
+
+	function handleClick() {
+		console.log('clicked!');
+		setSide(!side);
+		console.log(side);
+	}
 
 	const deckName = 'languageFlashcards';
 
-	const { data } = useQuery(GET_DECK, {
+	const { loading, data } = useQuery(GET_DECK, {
 		variables: { deckName: deckName },
 	});
 
@@ -26,38 +32,22 @@ function Flashcard() {
 		console.log(flashcardContent);
 	}, [data]);
 
+	// useEffect(() => {
+	// 	flashcardContent?.map((flashcard) => {
+	// 		console.log(flashcard);
+	// 	});
+	// }, [flashcardContent]);
+
 	// const handleShowAnswerClick = (event) => {
 	// 	event.preventDefault();
+	// 	event.stopPropagation();
 
-	// 	setShowAnswerSelected(true);
+	// 	setRemoveStyles(true);
 	// };
 
 	const hiddenStyle = {
 		display: 'none',
 	};
-
-	function showTranslation(id) {
-		setRemoveStyles(true);
-		let clickedFlashcard = {};
-		flashcardContent?.map((flashcard) => {
-			if (flashcard._id === id) {
-				clickedFlashcard = flashcard;
-			}
-			return clickedFlashcard;
-		});
-		setFrenchTranslation(clickedFlashcard.frenchTranslation);
-		console.log(clickedFlashcard.frenchTranslation);
-		setSpanishTranslation(clickedFlashcard.spanishTranslation);
-		console.log(clickedFlashcard.spanishTranslation);
-	}
-
-	useEffect(() => {
-		console.log(frenchTranslation);
-	}, [frenchTranslation]);
-
-	useEffect(() => {
-		console.log(spanishTranslation);
-	}, [spanishTranslation]);
 
 	function swiped() {
 		if (cardCountIndex < flashcardContent.length) {
@@ -68,10 +58,6 @@ function Flashcard() {
 			setEndOfDeck(true);
 		}
 	}
-
-	useEffect(() => {
-		setFrenchTranslation(flashcardContent[cardCountIndex]);
-	}, [cardCountIndex]);
 
 	useEffect(() => {
 		console.log(cardCountIndex);
@@ -86,43 +72,32 @@ function Flashcard() {
 					</div>
 				) : (
 					<>
-						{flashcardContent?.map((flashcard) => (
-							<TinderCard
-								className='flashcard swipe'
-								key={flashcard._id}
-								onSwipe={(direction) => swiped(direction)}>
-								<div className='flashcard-content'>
-									<div
-										className='header-container'
-										onClick={() => showTranslation(flashcard._id)}>
-										<h2>{flashcard.englishTranslation}</h2>
-									</div>
+						{flashcardContent !== {} && !loading ? (
+							<>
+								{flashcardContent?.map((flashcard) => (
+									<TinderCard
+										className='flashcard col-10 col-md-4 swipe d-flex justify-content-center align-content-center'
+										key={flashcard._id}
+										onSwipe={(direction) => swiped(direction)}>
+										<div
+											className={`flashcard-content flashcard ${
+												side ? 'side' : ''
+											}`}
+											onClick={handleClick}>
+											<div className='front'>
+												<h2>{flashcard.englishTranslation}</h2>
+											</div>
 
-									<div
-										style={removeStyles ? {} : hiddenStyle}
-										className='translations'>
-										<p
-											style={{ display: 'hidden' }}
-											className='translation-label'>
-											French:
-											<span className='translation-text'>
-												{flashcard.frenchTranslation}
-											</span>
-										</p>
-										<p
-											style={{ display: 'hidden' }}
-											className='translation-label'>
-											Spanish:
-											<span className='translation-text'>
-												{flashcard.spanishTranslation}
-											</span>
-										</p>
-									</div>
-
-									<h4 style={removeStyles ? hiddenStyle : {}}>Tap the English phrase to reveal the translation</h4>
-								</div>
-							</TinderCard>
-						))}
+											<div className='back translations'>
+													<h2>{flashcard.frenchTranslation}</h2>
+											</div>
+										</div>
+									</TinderCard>
+								))}
+							</>
+						) : (
+							<div> Loading deck </div>
+						)}
 					</>
 				)}
 			</div>

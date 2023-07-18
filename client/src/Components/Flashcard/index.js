@@ -70,7 +70,7 @@ function Flashcard() {
 					<>
 						{flashcardContent?.map((flashcard) => (
 							<TinderCard
-								className='flashcard col-md-3 swipe d-flex justify-content-center align-content-center'
+								className='flashcard-item col-md-3 swipe d-flex justify-content-center align-content-center'
 								key={flashcard._id}
 								onSwipe={(direction) => swiped(direction)}>
 								<div

@@ -1,20 +1,23 @@
 .container {
   height: 100vh;
   width: 100vh;
+  display: grid;
 }
+
 .flashcard-container {
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
 }
 
-.flashcard {
+.flashcard-item {
   background-color: rgb(172, 178, 165);
   flex-direction: column;
   min-width: 30vw;
   min-height: 50vh;
+ 
+    position: absolute;
   border-radius: 15px;
-  position: absolute;
   margin: auto;
   transition: 250ms;
   transform-style: preserve-3d;
